@@ -1,9 +1,12 @@
 import json
 with open("champions.json") as fichero:
-    datos=json.load(fichero)
+    doc=json.load(fichero)
 
-print (type (datos))
+from funciones import listanombres
 # Lista el nombre de todos los equipos de la Champions
+
+for equipos in listanombres(doc):
+ print("-",equipos)
 
 # Cuenta la cantidad de victorias,empates y derrotas del equipo de elijas
 
