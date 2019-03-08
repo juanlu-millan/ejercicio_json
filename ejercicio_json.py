@@ -26,13 +26,13 @@ while (True):
 
         # Cuenta la cantidad de victorias,empates y derrotas del equipo de elijas
     elif opcion==2:
-        equipos = input("Dime un equipo:")
+        equipos = input("Dime un equipo para mostrar sus estadística:")
         print ("Balance del",equipos,"en Champions")
         print ("====================================")
         print (balance(equipos,doc)[0],"Victorias")
         print (balance(equipos,doc)[1],"Empates")
         print (balance(equipos,doc)[2],"Derrotas")
-        
+
         # Pide un equipo y te dice la cantidad de goles que ha marcado
     elif opcion==3:
 
