@@ -37,6 +37,7 @@ while (True):
         fecha = input("Dime una fecha (AAAA-MM-DD): ")
         print("")
         print ("Resultados de %s"%fecha)
+        print ("========================")
         for equipo1,equipo2,resultado1,resultado2 in fechapartido(fecha,doc):
             print (equipo1,"-",equipo2,"(",resultado1,"-",resultado2,")")
 

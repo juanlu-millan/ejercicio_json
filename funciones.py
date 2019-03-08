@@ -11,6 +11,27 @@ def listanombres (doc):
 
 
 # 2.Cuenta la cantidad de victorias,empates y derrotas del equipo de elijas
+def balance(equipo,doc):
+    victorias = 0
+    empates = 0
+    derrotas = 0
+    for partidos in doc["rounds"]:
+        for partido in partidos["matches"]:
+            if partido["team1"]["name"] == equipo:
+                if partido["score1"] > partido["score2"]:
+                    victorias = victorias + 1
+                if partido["score1"] == partido["score2"]:
+                    empates = empates + 1
+                if partido["score1"] < partido["score2"]:
+                    derrotas = derrotas + 1
+            if partido["team2"]["name"] == equipo:
+                if partido["score2"] > partido["score1"]:
+                    victorias = victorias + 1
+                if partido["score2"] == partido["score1"]:
+                    empates = empates + 1
+                if partido["score2"] < partido["score1"]:
+                    derrotas = derrotas + 1
+    return victorias,empates,derrotas
 
 # 3.Pide un equipo y te dice la cantidad de goles que ha marcado
 
