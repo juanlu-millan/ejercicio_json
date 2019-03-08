@@ -5,7 +5,8 @@ with open("champions.json") as fichero:
 from funciones import listanombres
 from funciones import goleadores
 from funciones import fechapartido
-
+from funciones import golesequipo
+from funciones import balance
 while (True):
     print('''
     Elige una opcion:
@@ -23,13 +24,12 @@ while (True):
         for equipos in listanombres(doc):
             print("-",equipos)
 
-# Cuenta la cantidad de victorias,empates y derrotas del equipo de elijas
-
-# Pide un equipo y te dice la cantidad de goles que ha marcado
+        # Cuenta la cantidad de victorias,empates y derrotas del equipo de elijas
+    
 
         # Introduce la fecha del partido,muestra los equipos y el resultado final
     elif opcion==4:
-        fecha = input("Dime una fecha (año-mes-día): ")
+        fecha = input("Dime una fecha (AAAA-MM-DD): ")
         print("")
         print ("Resultados de %s"%fecha)
         for equipo1,equipo2,resultado1,resultado2 in fechapartido(fecha,doc):
@@ -39,8 +39,8 @@ while (True):
     elif opcion==5:
         print ("TOP 5 de UCF:")
         for jugador,gol in goleadores(doc):
+            print ("==============")
             print(jugador,"-",gol)
-
     elif opcion == 0:
         break;
     else:
