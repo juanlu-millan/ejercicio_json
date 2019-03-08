@@ -25,7 +25,12 @@ while (True):
             print("-",equipos)
 
         # Cuenta la cantidad de victorias,empates y derrotas del equipo de elijas
-    
+
+        # Pide un equipo y te dice la cantidad de goles que ha marcado
+    elif opcion==3:
+
+        equipos = input("Dime un equipo:")
+        print ("El",equipos,"ha marcado un total de",golesequipo(equipos,doc),"goles")
 
         # Introduce la fecha del partido,muestra los equipos y el resultado final
     elif opcion==4:
